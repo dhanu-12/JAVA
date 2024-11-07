@@ -13,7 +13,9 @@ public class Main
             System.out.print("Enter team 2 : ");
             String t2 = sc.nextLine();
             
+            System.out.println();
             System.out.println("---------------------------");
+            System.out.println();
             
             int ans1 = r.nextInt(300) + 1;
             int ans2 = r.nextInt(300) + 1;
@@ -35,6 +37,9 @@ public class Main
             int count1 = 0;
             int count2 = 0;
             
+            System.out.println(t1+" turn");
+            System.out.println();
+            
             for(int i = 0;i < 3;i++)
             {
                 System.out.print("Do you want hint ? ");
@@ -51,6 +56,7 @@ public class Main
                 }
             }
             
+            System.out.println();
             System.out.print("Now predict your answer : ");
                 int guess1 = sc.nextInt();
                 
@@ -59,7 +65,12 @@ public class Main
                 score1 = 300 - (count1 * 25);
                 score1 = score1 - Math.abs(ans1 - guess1);
                 
+                System.out.println();
                 System.out.println("---------------------------");
+                System.out.println();
+            
+            System.out.println(t2+" turn");
+            System.out.println();
             
             for(int i = 0;i < 3;i++)
             {
@@ -78,6 +89,7 @@ public class Main
                 }
             }
             
+            System.out.println();
             System.out.print("Now predict your answer : ");
                 int guess2 = sc.nextInt();
                 
@@ -86,29 +98,35 @@ public class Main
                 score2 = 300 - (count2 * 25);
                 score2 = score2 - Math.abs(ans2 - guess2);
                 
+                System.out.println();
                 System.out.println("---------------------------");
+                System.out.println();
             
             System.out.println("Actual answer for "+t1+" is "+ans1);
             System.out.println(t1+" score is "+score1);
             
+            System.out.println();
             System.out.println("---------------------------");
+            System.out.println();
             
             System.out.println("Actual answer for "+t2+" is "+ans2);
             System.out.println(t2+" score is "+score2);
             
+            System.out.println();
             System.out.println("---------------------------");
+            System.out.println();
             
             if(score1 > score2) 
             {
-                System.out.println("The winner is "+t1);
+                System.out.println("Congrats!The winner is "+t1);
             }
             else if(score1 < score2) 
             {
-                System.out.println("The winner is "+t2);
+                System.out.println("Congrats!The winner is "+t2);
             }
             else
             {
-                System.out.println("It is a tie.");
+                System.out.println("It is a tie!");
             }
         }
     }
