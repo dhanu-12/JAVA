@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main 
+{
+public static void main(String[] args) 
+{
+    int a = 2;
+while(a < 7)
+a = a + 1;
+System.out.println(a+" ");
+for(int i = 0;i < a;i++)
+System.out.println("One Last Dance");
+for(int j = 1;j < 10;j++)
+a = a > j ? a : j;
+System.out.println(a);
+}
+}
